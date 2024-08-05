@@ -80,7 +80,7 @@ const MobileNavigationBar = ({ props, focusedMenu, setFocusedMenu, isFoldSideBar
                 <div className={['mobile-nav-bar-logo', isFoldSideBar && 'mobile-nav-bar-logo-fold'].join(' ')} onClick={() => { setFocusedMenu("menu1") }}>SAMPLE</div>
                 <div className={['mobile-nav-bar-fold-button', isFoldSideBar && 'mobile-nav-bar-fold-button-fold'].join(' ')} onClick={() => { setIsFoldSideBar(!isFoldSideBar) }}>
                     {
-                        isFoldSideBar ? <AiOutlineMenuFold /> : <AiOutlineMenuUnfold />
+                        isFoldSideBar ? <AiOutlineMenuUnfold /> : <AiOutlineMenuFold />
                     }
                 </div>
             </div>
