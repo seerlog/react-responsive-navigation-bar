@@ -1,0 +1,182 @@
+/* pc */
+.pc-nav-bar {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    opacity: 0.85;
+
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pc-nav-bar-logo {
+    font-family: 'Pretendard';
+    font-weight: 800;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 50px;
+    user-select: none;
+}
+
+.pc-nav-bar-menu {
+    font-family: 'Pretendard';
+    font-weight: 800;
+    cursor: pointer;
+    padding: 0 10px;
+    user-select: none;
+}
+
+.pc-nav-bar-menu:hover {
+    color: orange;
+}
+
+.pc-nav-bar-menu-focused {
+    color: orange;
+}
+
+/* mobile */
+.mobile-nav-bar {
+    width: 150px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #242424;
+    transition: width 0.2s ease-in-out;
+
+    /* flex */
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.mobile-nav-bar-fold {
+    width: 50px;
+}
+
+.mobile-nav-bar-head {
+    height: 18px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.mobile-nav-bar-head-fold {
+    align-self: center;
+}
+
+.mobile-nav-bar-logo {
+    font-family: 'Pretendard';
+    font-weight: 800;
+    font-size: 18px;
+    cursor: pointer;
+    padding-left: 30px;
+    color: #FFFFFF;
+    user-select: none;
+}
+
+.mobile-nav-bar-logo-fold {
+    display: none;
+}
+
+.mobile-nav-bar-fold-button {
+    font-size: 18px;
+    cursor: pointer;
+    padding-left: 20px;
+    color: #FFFFFF;
+    user-select: none;
+    
+    /* flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-nav-bar-fold-button-fold {
+    padding: 0;
+}
+
+.mobile-nav-bar-menu {
+    height: 18px;
+    align-self: flex-start;
+    cursor: pointer;
+    padding: 10px 30px;
+    color: #8C8C8C;
+    user-select: none;
+
+    /* flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-nav-bar-menu:hover {
+    color: orange;
+}
+
+.mobile-nav-bar-menu-focused {
+    color: orange;
+}
+
+.mobile-nav-bar-menu-fold {
+    align-self: center;
+    padding: 10px 0;
+}
+
+.mobile-nav-bar-menu-icon {
+    font-size: 18px;
+
+    /* flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-nav-bar-menu-icon-fold {
+    align-self: center;
+}
+
+.mobile-nav-bar-menu-label {
+    font-family: 'Pretendard';
+    font-weight: 800;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.mobile-nav-bar-menu-label-fold {
+    display: none;
+}
+
+.mobile-nav-bar-menu-label-unfold {
+    animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .pc-nav-bar {
+        display: none;
+    }
+
+    .mobile-nav-bar {
+        display: flex;
+    }
+}
